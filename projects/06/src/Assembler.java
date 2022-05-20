@@ -302,12 +302,12 @@ public class Assembler
     }
 
     //converting asm file to hack file
-    public static void translation(String dir)
+    public static void converter(String dir)
     {
 
         File fIn = new File(dir);
 
-        //if input file is not an .asm file, throw an exception and stop translation
+        //if input file is not an .asm file, throw an exception and stop converter
         if (!ExtraFunxions.isAsm(fIn))
         {
             throw new IllegalArgumentException("Wrong file format! Only .asm is accepted!");
@@ -358,7 +358,7 @@ public class Assembler
             return;
         }
 
-        translation(args[0]);
+        converter(args[0]);
         
     }
 

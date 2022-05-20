@@ -39,7 +39,7 @@ CHIP CPU {
         pc[15];          // address of next instruction
 
     PARTS:
-    Mux16(a=instruction,b=ALUout,sel=instruction[15],out=Ain); //based on 15th bit we decide the output
+    Mux16(a=instruction,b=ALUout,sel=instruction[15],out=Ain); //based on 15th bit we decide the what to be stored in A register
     Not(in=instruction[15],out=notinstruction); //checking whether it is C instruction or not
 
     //checking and performing whether it is A operation or not along with loading to A if it C instruction
